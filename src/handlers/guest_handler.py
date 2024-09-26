@@ -19,6 +19,6 @@ user_repo = UserDataRepository(supabase)
 async def guest_start(message: Message, state: FSMContext):
     chat_id = message.chat.id
     await state.clear()
-    user_repo.insert_field(chat_id, "chat_id", chat_id)
+    user_repo.update_field(chat_id, "chat_id", chat_id)
     await message.answer(START, reply_markup=guest_kb())
     await state.set_state(Guest.guest_main_room)
