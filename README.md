@@ -18,7 +18,7 @@ docker run -d --name telegram-bot-container telegram-bot:latest
 
 3. Success!
 
-## From Python 
+## From Python (Only 3.11.x and older)
 
 1. Install requirements.txt
 
